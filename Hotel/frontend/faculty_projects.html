@@ -1,0 +1,1 @@
+<div id='projects'></div><script>fetch('../backend/get_projects.php').then(r=>r.json()).then(d=>{document.getElementById('projects').innerHTML=d.map(p=>p.project_title).join('<br>')})</script>

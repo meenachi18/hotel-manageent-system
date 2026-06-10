@@ -1,0 +1,1 @@
+<?php include 'config.php'; $q=mysqli_query($conn,'SELECT * FROM projects'); $d=[]; while($r=mysqli_fetch_assoc($q))$d[]=$r; echo json_encode($d); ?>

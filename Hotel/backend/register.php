@@ -1,0 +1,1 @@
+<?php include 'config.php'; mysqli_query($conn,"INSERT INTO users VALUES('','{$_POST['name']}','{$_POST['email']}','{$_POST['phone']}','{$_POST['password']}','{$_POST['role']}')"); echo 'Account Created'; ?>

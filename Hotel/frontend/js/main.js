@@ -1,0 +1,1 @@
+document.querySelectorAll('form').forEach(f=>f.onsubmit=e=>{e.preventDefault();fetch('../backend/'+(f.id==='loginForm'?'login.php':f.id==='registerForm'?'register.php':'upload_project.php'),{method:'POST',body:new FormData(f)}).then(r=>r.text()).then(alert);});

@@ -1,0 +1,1 @@
+<?php include 'config.php'; $f=$_FILES['file']['name']; move_uploaded_file($_FILES['file']['tmp_name'],'../uploads/'.$f); mysqli_query($conn,"INSERT INTO projects VALUES('','{$_SESSION['user']['id']}','{$_POST['title']}','$f','')"); mail($_SESSION['user']['email'],'Project Uploaded','Your project uploaded'); echo 'Uploaded'; ?>

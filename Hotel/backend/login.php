@@ -1,0 +1,1 @@
+<?php include 'config.php'; $q=mysqli_query($conn,"SELECT * FROM users WHERE email='{$_POST['email']}' AND password='{$_POST['password']}'"); if($r=mysqli_fetch_assoc($q)){$_SESSION['user']=$r; echo $r['role'];} else echo 'Invalid'; ?>
